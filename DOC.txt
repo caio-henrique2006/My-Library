@@ -1,0 +1,32 @@
+Esse arquivo visa documentar todo o código implementado nesse programa;
+
+My-Library foi feito por Caio Henrique;
+
+Biblioteca virtual que guarda os livros lidos pelo autor, primeiramente feita em Python.
+Os livros serão guardados com título, autor, gênero, editora...
+Todos eles poderam ser acessados via a interface do arquivo Main.py
+Há um sistema de busca para encontrar os livros
+
+--------------------------------------------------------------------------------------------------------
+
+# Main.py
+/*Organiza o funcionamento do programa e produz a interface*/
+
+class UserInterface; // Produz a interface
+	Methods:
+		UIQuestionsAnswers(); // Dirige o usuário as sessões e Recebe as informações
+
+class FinderControl; // Organiza o funcionamento rebendo e retornando informações
+	Methods:
+		SendAndReturn(); // Recebe e Retorna
+
+# Finder.py
+/*Contém todo o código lógico para encontrar livros*/
+
+class Find; // Gerencia a Data.py e recolhe os livros procurados
+	Methods:
+		Data("DataBank"); // Abre o banco de dados e o organiza em Bibliotecas
+		Searcher("ListOfBooks", "Sessão(título)"); // Encontra o livro por sessão
+
+# Data.txt; // Conjunto completo de todos os livros;
+

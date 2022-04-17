@@ -1,23 +1,6 @@
-# -*- coding: UTF-8 -*-
-'''
-class bookFinder():
-    readData(Data, whatFind)
-        return array
-    mainFinder():
-        Find Keys
-        Find Key pieces
-        return bookIndex
-'''
+class Find:
+	def ManageData(data):
+		dados = open(data, "r", -1, "UTF-8") # Abri o arquivo no enconding UTF-8
+		print(dados.readline())
 
-class bookFinder():
-    
-    def readData(dataWay, dataSection):
-        data = open(dataWay, "r")
-        book = data.readline()
-        return book
-    def mainFinder(dataListBook):
-        return dataListBook
-
-data = open("Data.txt", "r")
-print(data.readline())
-print("apologia de sócrates|platão|hunter|apologia|físico|1877")
+Find.ManageData("Data.txt")
