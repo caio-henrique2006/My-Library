@@ -8,25 +8,44 @@ Todos eles poderam ser acessados via a interface do arquivo Main.py
 Há um sistema de busca para encontrar os livros
 
 --------------------------------------------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-# Main.py
-/*Organiza o funcionamento do programa e produz a interface*/
+# Main.py /*Organiza o funcionamento do programa e produz a interface*/
 
-class UserInterface; // Produz a interface
-	Methods:
-		UIQuestionsAnswers(); // Dirige o usuário as sessões e Recebe as informações
+=class UserInterface: // Guarda a interface
 
-class FinderControl; // Organiza o funcionamento rebendo e retornando informações
-	Methods:
-		SendAndReturn(); // Recebe e Retorna
+	-Atributes:
 
-# Finder.py
-/*Contém todo o código lógico para encontrar livros*/
+	+Methods:
+		+QuestionsAnswers(); // Dirige o usuário as sessões e Recebe as informações
 
-class Find; // Gerencia a Data.py e recolhe os livros procurados
-	Methods:
-		Data("DataBank"); // Abre o banco de dados e o organiza em Bibliotecas
-		Searcher("ListOfBooks", "Sessão(título)"); // Encontra o livro por sessão
+=class ManageFinder: // Organiza o funcionamento rebendo e retornando informações
+
+	-Atributes:
+
+	+Methods:
+		+finder(); // Encontra o livro
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Finder.py /*Contém todo o código lógico para encontrar livros*/
+
+=class ManageData: // Gerencia a Data.py e recolhe os livros procurados
+	
+	-Atributes:
+
+	+Methods:
+		+openData("DataBank"); // Abre o banco de dados e o organiza em Bibliotecas
+		+organizer() // Organiza os dados
+
+=class FindingTools:
+
+	-Atributes:
+
+	+Methods:
+		+Searcher("ListOfBooks", "Sessão(título)"); // Encontra o livro por sessão
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # Data.txt; // Conjunto completo de todos os livros;
 

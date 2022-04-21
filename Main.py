@@ -1,13 +1,13 @@
 import Finder
 
 class UserInterface:
-	def UIQuestionAnswers():
+	def QuestionAnswers():
 		print("\nSeja Bem vindo a My-Library")
-		FinderControl.SendAndReturn()
+		ManageFinder.finder()
 
-class FinderControl:
-	def SendAndReturn():
-		print("Recebendo e Enviando !!!")
+class ManageFinder:
+	def finder():
+		print("Procurando...")
 
 
-UserInterface.UIQuestionAnswers()
+UserInterface.QuestionAnswers()
